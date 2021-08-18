@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    
+    thead, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even){background-color: #f2f2f2}
+    
+    thead {
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
     <title>My app productos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
 <body>
 <h1>INGRESO DE PRODUCTOS</h1>
 <!-- <form action="/api/productos/guardar" method="post"> -->
-  <form onsubmit="return sendData(this)">
+  <form onsubmit="return sendData(this)" action="/api/productos/guardar" method="post" >
   <ul>
     <li>
       <label for="name">Title:</label>
@@ -31,7 +45,21 @@
     </li>
   </ul>
 </form>
-<div id="lista"></div>        
+<div id="lista"></div>
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <td>Producto</td>
+          <td>Precio</td>
+          <td>Thumbnail</td>
+      </tr>
+  </thead>
+  <tbody>
+      <div>
+        <div id="lista"></div>
+      </div>
+  </tbody>
+</table>
 </div>
 </div>
 <script src="/socket.io/socket.io.js"></script>

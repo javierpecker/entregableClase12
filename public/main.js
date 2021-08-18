@@ -33,6 +33,5 @@ function render(data) {
 
 socket.on('messages', function (data) {
   console.log('RECIBI MENSAJE');
-  alert(JSON.stringify(data));
   render(data);
 });

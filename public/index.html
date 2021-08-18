@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>My app productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+<body>
+<h1>INGRESO DE PRODUCTOS</h1>
+<!-- <form action="/api/productos/guardar" method="post"> -->
+  <form onsubmit="return sendData(this)">
+  <ul>
+    <li>
+      <label for="name">Title:</label>
+      <input type="text" class="form-control" id="title" name="title">
+    </div>
+    <div class="form-group">
+    </li>
+    <li>
+      <label for="name">Price:</label>
+      <input type="number" class="form-control" id="price" name="price">
+    </li>
+    <li>
+      <label for="name">Thumbnail:</label>
+      <input type="text" class="form-control" id="thumbnail" name="thumbnail">
+    </li>
+    <li class="btn btn-default">
+      <button type="submit" class="btn btn-default">Guardar</button>
+    </li>
+  </ul>
+</form>
+<div id="lista"></div>        
+</div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script> 
+</body>
+</html>

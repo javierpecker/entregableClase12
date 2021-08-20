@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <style>
     
@@ -24,7 +24,7 @@
 <body>
 <h1>INGRESO DE PRODUCTOS</h1>
 <!-- <form action="/api/productos/guardar" method="post"> -->
-  <form onsubmit="return sendData(this)" action="/api/productos/guardar" method="post" >
+  <!-- <form onsubmit="return sendData(this)" action="/api/productos/guardar" method="post" >
   <ul>
     <li>
       <label for="name">Title:</label>
@@ -65,4 +65,53 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="main.js"></script> 
 </body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Proyecto Class 12</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC'
+      crossorigin='anonymous'
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="text-light bg-secondary h-100">
+        <div class="col-md-4 my-auto">
+          <h1>PRODUCTOS FORM</h1>
+          <form action="/api/productos/guardar" method="POST" id="noteForm">
+            <ul>
+              <li>
+                <label for="name">Title:</label>
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="form-group">
+              </li>
+              <li>
+                <label for="name">Price:</label>
+                <input type="number" class="form-control" id="price" name="price">
+              </li>
+              <li>
+                <label for="name">Thumbnail:</label>
+                <input type="text" class="form-control" id="thumbnail" name="thumbnail">
+              </li>
+              <li class="btn btn-default">
+                <button type="submit" class="btn btn-default">Guardar</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="col-md-8" id="lista">
+        </div>
+      </div>  
+    </div>
+  </body>
 </html>
